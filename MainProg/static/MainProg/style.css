@@ -1,0 +1,29 @@
+
+th{
+    margin: 100px;
+    padding: 10px;
+    border: 1px solid;
+}
+
+
+.container_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+    
+}
+
+table {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+
+body {
+
+    background-color: darkslategray;
+}

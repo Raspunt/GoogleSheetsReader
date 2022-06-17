@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "excelreader-353408",
+  "private_key_id": "990f77d548764099a8d3e598bbdc097203d058f6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDkGBLo31N7Kvwo\nTkkXdK8OEFcwZv+h05Dx/Vyi2wdN5yIky3RWfpP1umB7c2lLy/S6eQXt3LnKVL7t\n6yakJ5lWHNpFb0vNKIO0E1mOp5mrwrR5CdSO+02DbEQiRfzlmaa4NLGpQci5gw49\nYL8PpFzEBeYZZZJ5pow+Me6aItSJxyoJNekabbdDmZ0xFS4DgB5rOwjoe9vPn3rs\nYOvr/42saGB7TKsoKWoao2BWBEjxH4VDDHGyLBUHEvdXSiUx8pScxL/4HOFRGwCX\nQoslEf+bnoLyZa3bawpMKvjdPQVRl/j6qp5PtwS2uk0rOHNfWu+4Sedo+JdBEd73\nXXcioIVpAgMBAAECggEAG2g8H3C0PHzAA0zS0gdygF9cxqNdrJF6HWWq86ObV1RC\nQUcUIc+AUlq0fKjzukiVzbE8keX/ig0QSxDCGh/q+BKr9INoyYxIdQMNNAu19pJE\n8rVIbezK1dOUxUSBHIqPopssTNDrgET72Uqucn/2qJQn353ZkZX+THvd9nXgcXR7\nmXz906fXDII9UrD+51TplXi/DW02b3Lm1mp37ZbXPGHoJyV2GC42n46opy7Wi+Mb\nYQ255c2kI6KkCcOuARUgX8C7ULQln1kq6/VH8E2vw8JWu6DsBgWeyoS6eGL75LVy\nSPETSPULgPhQBArFeCT1CQUTXQFluARyY5YOPjGZ4QKBgQD9HxZ700RTfocT6jZ0\n/5mCV1HFfac0sxiwsrnR79md9D1R1QG33LyERGAU6+inkpKD6iEpXZswl5JtOjHG\nu7FbQ/8yo+/5C8PSA2eGVE9ItsB4RECW5fWLwg56bYx1fiMiCVIU5A5vm8wR0OXw\np2VdF4mQz6ON9CC72VyJDvB6OQKBgQDmsB+xZU7uUeApMuYuMPjsUE1XZ5qKE19W\n0PCFG7a6mcJxNPiOgyCrr5WTecs2Qt9f1FYAwLSvwxTptZiG4Njx3QwYJOqvHsia\n5seCN1BvYESdq61i/8agYowY+Ni1nIV+F1yLVmc3X4v3QFJx+q2dz9AE/7HG8cPh\nLghIVowksQKBgQDxxS3unD8ZGTPge8gEPNfdvZXnczuwhJjCvhPrSJOt4cpoTXLU\nscyG8eBsW2DgHoo/4fRG1JgU89Hy7rD4x/KB4BLzxc7DLM+f24yYrBMGuzhgJ6Ei\nAQhms7asjdKprw/TxN9YAPUg+ckUA1p+YQXaw06suQfZ4SMbCmTurQxZUQKBgQCv\niYOETE+kfz7wep+2tGMmBvDjOp3YxWb9u93Zm74O/eN8m08rulII8oICB2J/dqFc\n3UlYJ0sWl355XEqlD8FlQcvrL2Q5P1ZssIFN7+NP7NQpmjJEq9arwnFSq0DT6TeX\nPBWanXPLKfRqf1J9EsA73p8uvpa7iMqBtbJtwRXA8QKBgEG2+TCREolXsEhv/q2/\nozHGxQuajTX9ptmCzMg3ILv2PSrHsxBFlmbkp39zXDeMXVFWi1YedYKzV0kYnD/V\n5KzTvN8KO5Q6uKCrlFEAmkx8Ny+c4NyJcZVq4hFI8Okoz9IkxPgZ2Hbi40pFPz8V\n82u+Zwis2vbuZvFbM+WCde37\n-----END PRIVATE KEY-----\n",
+  "client_email": "account@excelreader-353408.iam.gserviceaccount.com",
+  "client_id": "104264523726081516032",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/account%40excelreader-353408.iam.gserviceaccount.com"
+}

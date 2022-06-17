@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel reader</title>
+
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'MainProg/style.css' %}">
+
+</head>
+<body>
+
+    <div class="container_center">
+
+
+        
+        <table>
+            
+
+            <tr>
+                <th>№</th>
+                <th>заказ №</th>
+                <th>стоимость в Доларах</th>
+                <th>стоимость в Рублях</th>
+                <th>Дата</th>
+                
+                
+            </tr>
+
+            {% for order in orders %}
+
+            <tr>
+                <th>{{order.id}}</th>
+                <th>{{order.product_number}}</th>
+                <th>{{order.price_dollars  }}</th>
+                <th>{{order.price_rubles  }}</th>
+                <th>{{order.date  }}</th>
+                
+            </tr>
+
+
+            {% endfor %}
+    
+        </table>
+        
+    </div>
+    
+</body>
+</html>

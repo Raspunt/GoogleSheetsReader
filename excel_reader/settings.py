@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-8g&tj#c4h2n2*zbtypyjp3l#r@rp0#cxul@#3)v^a3x8veqqyu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'excel_reader.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'excel_readerdb', 
-        'USER': 'postgres', 
-        'PASSWORD': '',
-        'HOST': '127.0.0.1', 
+        'NAME': os.environ.get("POSTGRES_NAME"), 
+        'USER': os.environ.get("POSTGRES_USER"), 
+        'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
+        'HOST': 'db', 
         'PORT': '5432',
     }
 }

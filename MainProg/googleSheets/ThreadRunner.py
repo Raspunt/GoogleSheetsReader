@@ -12,7 +12,12 @@ def UpdateLoop():
         sc = SheetsConnector()
         sc.connect()
         values = sc.GetAllDataFromGoogleSheets()
-        asyncio.run(sc.getDolarsKyrse(values['values']))
+
+        try:
+            asyncio.run(sc.getDolarsKyrse(values['values']))
+        except asyncio.TimeoutError:
+            pass
+
         sc.saveToDbOrders()
 
 

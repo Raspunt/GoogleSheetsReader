@@ -81,13 +81,6 @@ class SheetsConnector:
                             self.order_list.append((product_id,int(dolars),rubles,row[3]))
 
 
-                # print(tree.findall('''.//*[@id='R01235s']''')[0])
-
-
-                # for value in soup.find_all('Valute',id="R01235"):
-                #     print(value)
-                    # self.order_list.append((product_id,dolars,rubles,row[3]))
-
 
 
 

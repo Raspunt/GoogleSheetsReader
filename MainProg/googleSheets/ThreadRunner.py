@@ -15,8 +15,8 @@ def UpdateLoop():
 
         try:
             asyncio.run(sc.getDolarsKyrse(values['values']))
-        except asyncio.TimeoutError:
-            pass
+        except asyncio.TimeoutError as e:
+            print(e)
 
         sc.saveToDbOrders()
 

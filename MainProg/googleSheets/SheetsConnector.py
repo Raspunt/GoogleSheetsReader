@@ -5,7 +5,7 @@ import asyncio
 import httplib2 
 import apiclient.discovery
 from oauth2client.service_account import ServiceAccountCredentials	
-from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
 
 from  ..models import Orders
 from excel_reader.settings import BASE_DIR
@@ -54,22 +54,41 @@ class SheetsConnector:
         self.SheetsColumSize = range_
 
     
+    count = 0
     async def MakeAsyncRequest(self,row):
+
+
 
         product_id = row[1]
         dolars = row[2]
         date = row[3].replace(".","/")
-        SiteUrl =f"http://www.cbr.ru/scripts/XML_dynamic.asp?date_req1={date}&date_req2={date}&VAL_NM_RQ=R01235"
+        SiteUrl =f"http://www.cbr.ru/scripts/XML_daily.asp?date_req={date}"
 
         async with aiohttp.ClientSession() as session:
-            async with session.get(SiteUrl,timeout=5) as response:
+            async with session.get(SiteUrl) as response:
                 
                 xml = await response.text()
-                soup = BeautifulSoup(xml,'xml')
+                tree = ET.ElementTree(ET.fromstring(xml))
 
-                for value in soup.find_all('Value'):
-                    rubles = float(value.text.replace(",",".")) * float(dolars)
-                    self.order_list.append((product_id,dolars,rubles,row[3]))
+                root = tree.getroot()
+
+
+                self.count += 1
+                for child in root:
+                    for ch in child:
+                        if child.attrib["ID"] == "R01235" and ch.tag=='Value':
+                            rubles = float(ch.text.replace(",",".")) * float(dolars)
+                            self.order_list.append((product_id,int(dolars),rubles,row[3]))
+
+
+                # print(tree.findall('''.//*[@id='R01235s']''')[0])
+
+
+                # for value in soup.find_all('Valute',id="R01235"):
+                #     print(value)
+                    # self.order_list.append((product_id,dolars,rubles,row[3]))
+
+
 
 
     def saveToDbOrders(self):
@@ -85,16 +104,21 @@ class SheetsConnector:
                         date = order[3]
                     )
 
+
+                
+
         
 
     async def getDolarsKyrse(self,rows):
 
         # Делаем асинхронные запросы по всем ссылкам
 
+
         tasks = []        
         for row in rows:
             task = asyncio.create_task(self.MakeAsyncRequest(row))
             tasks.append(task)
+
         
         await asyncio.gather(*tasks)
 

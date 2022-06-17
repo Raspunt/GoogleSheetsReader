@@ -9,7 +9,6 @@ COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 RUN python manage.py migrate
 RUN python manage.py makemigrations
-RUN apt-get install python-lxml
 
 COPY . /code/
 
